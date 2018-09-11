@@ -12,7 +12,7 @@ manipulador.hello = (data, callback) => {
 };
 
 manipulador.naoEncontrou = (data, callback) => {
-    callback(400, {'message': 'Caminho não encontrado :('});
+    callback(400, {'message': 'Caminho não encontrado!'});
 };
 
 let rotas = {
@@ -56,5 +56,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(config.port, _ => {
-    console.log(`O servidor está escutando a porta ${config.port}`)
+    console.log(`O servidor está escutando na porta ${config.port} no ambiente de ${config.envName}`)
 });
